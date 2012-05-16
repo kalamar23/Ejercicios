@@ -1,0 +1,22 @@
+
+public class ClaseExterna {
+
+	int x = 10;
+	
+	class ClaseInterna {
+		
+		
+	}
+	
+	
+	
+	public void main(String[] args){
+		
+		
+		
+	}
+	
+	
+	
+	
+}

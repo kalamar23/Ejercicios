@@ -1,0 +1,18 @@
+/** Uso de extends
+ */
+class A {
+	int X = 1;
+}
+
+class B {
+	double X = 2.0;
+}
+public class Extender {
+
+
+	public static void main(String[] args) {
+		// Creacion de objetos
+
+	}
+
+}

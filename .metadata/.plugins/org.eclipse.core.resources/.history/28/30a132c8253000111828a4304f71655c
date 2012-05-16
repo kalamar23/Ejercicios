@@ -1,0 +1,31 @@
+/** Uso de While 
+*/
+import java.io.*;
+public class Operador7 {
+// Uso de break para terminar un loop infinito
+	static void ope1() throws IOException {
+		
+		while(true){
+			char ch;
+			System.out.println("Ingrese c o C para continuar : ");
+			ch = (char) System.in.read();
+			if(ch != 'c' && ch != 'C')
+				System.out.println((ch != 'c' && ch != 'C'));
+				
+				break;
+		}
+		
+		
+	}
+
+	static void ope2(){
+		
+	}
+	public static void main(String[] args) throws IOException {
+		// Creacion de objetos
+ope1();
+		
+		
+	}
+
+}

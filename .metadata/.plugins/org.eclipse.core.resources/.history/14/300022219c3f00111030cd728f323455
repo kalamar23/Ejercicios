@@ -1,0 +1,36 @@
+import javax.swing.*;
+public class Mayor {
+	int flag = 19;
+	
+	
+	public int prop1 = 1;
+	public int prop2 = 2;
+	public int prop3 = 4;
+	public int prop4 = 8;
+	public int prop5 = 16;
+
+	
+
+	// Generar un array de enteros aleatorios de dos digitos y ordenar de menor a mayor
+	public void mayor(){
+
+		if((flag & (prop1 | prop2 | prop3)) > 0){
+		System.out.println(prop1 | prop2 | prop5);
+			System.out.println("Cumple !");
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Creacion de objetos
+
+		Mayor ma = new Mayor();
+		ma.mayor();
+	}
+
+}

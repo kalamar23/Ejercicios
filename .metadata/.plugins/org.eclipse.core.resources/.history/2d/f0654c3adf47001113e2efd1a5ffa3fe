@@ -1,0 +1,31 @@
+
+public class Ordenar {
+
+	//  Diseñar un programa que muestre el producto de los 10 primeros números impares
+	
+	public void numeros (){
+		
+		for(byte numero = 1; numero < 21;numero++){
+			
+			
+			
+		}
+		
+		
+	}
+	
+	
+	
+	public static void main(String[] args ){
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}

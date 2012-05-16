@@ -1,0 +1,310 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.LayoutManager;
+import java.awt.GridLayout;
+import java.util.*;
+
+public class Conversor extends JFrame implements ActionListener {
+	private static int ALTO = 533;
+	private static int ANCHO = 400;
+	private static String TITULO = "Conversor  2012 - Derechos Reservados";
+
+	// conversor a decimal, hexadecimal y romano
+
+	JPanel panel = new JPanel();
+	JTextField numero = new JTextField(20);
+	JLabel etiqueta = new JLabel();
+	Font font = new Font("Courier", Font.PLAIN, 20);
+	Font font2 = new Font("Courier", Font.PLAIN, 30);
+	Font font3 = new Font("Courier", Font.PLAIN, 17);
+
+	ImageIcon img = new ImageIcon("images/fondo.jpg");
+	ImageIcon bu1 = new ImageIcon("images/binario.gif");
+	ImageIcon bu2 = new ImageIcon("images/hexa.gif");
+	ImageIcon bu3 = new ImageIcon("images/romano.gif");
+
+	JButton boton1 = new JButton(bu1);
+	JButton boton2 = new JButton(bu2);
+	JButton boton3 = new JButton(bu3);
+	JLabel resultado = new JLabel();
+	JLabel exception = new JLabel();
+JLabel romano = new JLabel();
+	Conversor() {
+
+		etiqueta.setIcon(img);
+		boton1.setSize(132, 39);
+		boton1.setLocation(40, 150);
+		etiqueta.add(boton1);
+
+		boton2.setSize(132, 39);
+		boton2.setLocation(200, 150);
+		etiqueta.add(boton2);
+
+		boton3.setSize(132, 39);
+		boton3.setLocation(365, 150);
+		etiqueta.add(boton3);
+		numero.setFont(font);
+		numero.setForeground(Color.RED);
+		etiqueta.add(numero);
+		numero.setSize(150, 40);
+		numero.setLocation(180, 90);
+		resultado.setSize(350, 40);
+		resultado.setLocation(120, 290);
+		etiqueta.add(resultado);
+		exception.setForeground(Color.WHITE);
+		exception.setFont(font3);
+		exception.setSize(350, 100);
+		exception.setLocation(120, 180);
+		etiqueta.add(exception);
+		romano.setForeground(Color.WHITE);
+		romano.setFont(font3);
+		romano.setSize(350, 100);
+		romano.setLocation(120, 180);
+		etiqueta.add(romano);
+		panel.add(etiqueta);
+		add(panel);
+		super.setSize(ALTO, ANCHO);
+		super.setTitle(TITULO);
+		super.setVisible(true);
+		boton1.addActionListener(this);
+		boton2.addActionListener(this);
+		boton3.addActionListener(this);
+
+		close();
+	}
+
+	// acciones de botones
+
+	public void actionPerformed(ActionEvent e) {
+
+		if (e.getSource() == boton1) {
+			try {
+				binario(Integer.parseInt(numero.getText()));
+
+			}
+
+			catch (NumberFormatException io) {
+
+				exception.setText("Usted debe ingresar un numero !");
+			}
+		}
+
+		if (e.getSource() == boton2) {
+			try {
+				hexa(Integer.parseInt(numero.getText()));
+
+			}
+
+			catch (NumberFormatException io) {
+
+				exception.setText("Usted debe ingresar un numero !");
+
+			}
+		}
+
+		if (e.getSource() == boton3) {
+			try {
+				romano(Integer.parseInt(numero.getText()));
+
+			}
+
+			catch (NumberFormatException io) {
+
+				exception.setText("Usted debe ingresar un numero !");
+
+				
+			}
+		}
+	}
+
+	// al cerrar ventana
+	public void close() {
+
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+	}
+
+	// Binario
+	private void binario(int numero) {
+		byte TAM = 0;
+		Stack st = new Stack();
+		StringBuffer sb = new StringBuffer(30);
+
+		while (numero > 0) {
+
+			st.push(String.valueOf(numero % 2));
+			numero >>= 1;
+		}
+
+		while (!st.empty()) {
+
+			sb.append(new String((String) st.pop()));
+		}
+
+		switch (sb.length()) {
+		case 17:
+			TAM = 25;
+			break;
+		case 18:
+		case 19:
+		case 20:
+			TAM = 23;
+			break;
+		case 21:
+		case 22:
+		case 23:
+			TAM = 20;
+			break;
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+			TAM = 18;
+			break;
+		case 28:
+		case 29:
+		case 70:
+			TAM = 17;
+			break;
+		default:
+			TAM = 30;
+			break;
+		}
+		Font font4 = new Font("Courier", Font.PLAIN, TAM);
+		resultado.setText(new String(sb));
+		resultado.setFont(font4);
+		resultado.setSize(resultado.getPreferredSize());
+		etiqueta.repaint();
+		exception.setText("");
+	}
+
+	// Hexadecimal
+	private void hexa(int numero) {
+		Stack st = new Stack();
+		StringBuffer sb = new StringBuffer();
+		int op;
+		while (numero > 0) {
+			op = numero % 16;
+			switch (op) {
+
+			case 15:
+				st.push(new String("F"));
+				break;
+			case 14:
+				st.push(new String("E"));
+				break;
+			case 13:
+				st.push(new String("D"));
+				break;
+			case 12:
+				st.push(new String("C"));
+				break;
+			case 11:
+				st.push(new String("B"));
+				break;
+			case 10:
+				st.push(new String("A"));
+				break;
+			default:
+				st.push(String.valueOf(numero % 16));
+			}
+			numero >>= 4;
+		}
+		while (!st.empty()) {
+
+			sb.append(new String((String) st.pop()));
+		}
+		resultado.setFont(font2);
+		resultado.setText(new String(sb));
+		etiqueta.repaint();
+		exception.setText("");
+	}
+
+	// Romanos
+	private void romano(int numero) {
+		StringBuffer sb = new StringBuffer();
+if(numero < 2000) {		
+		while (numero >= 1000) {
+			sb.append("M");
+			numero -= 1000;
+		}
+
+		while (numero >= 900) {
+			sb.append("CM");
+			numero -= 900;
+		}
+
+		while (numero >= 500) {
+			sb.append("D");
+			numero -= 500;
+		}
+
+		while (numero >= 400) {
+			sb.append("CD");
+			numero -= 400;
+		}
+		while (numero >= 100) {
+			sb.append("C");
+			numero -= 100;
+		}
+		while (numero >= 90) {
+			sb.append("XC");
+			numero -= 90;
+		}
+		while (numero >= 50) {
+			sb.append("L");
+			numero -= 50;
+		}
+		while (numero >= 40) {
+			sb.append("XL");
+			numero -= 40;
+		}
+		while (numero >= 10) {
+			sb.append("X");
+			numero -= 10;
+		}
+		while (numero >= 9) {
+			sb.append("IX");
+			numero -= 9;
+		}
+
+		while (numero >= 5) {
+			sb.append("V");
+			numero -= 5;
+		}
+
+		while (numero >= 4) {
+			sb.append("IV");
+			numero -= 4;
+		}
+		while (numero >= 1) {
+			sb.append("I");
+			numero -= 1;
+		}
+		resultado.setFont(font2);
+		resultado.setText(new String(sb));
+		etiqueta.repaint();
+		exception.setText("");
+		romano.setText("");
+}
+else		
+	romano.setText("ingresar un numero menor a 2000");
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Creacion de objetos
+
+		Conversor co = new Conversor();
+		co.setResizable(false);
+		co.setLocationRelativeTo(null);
+
+	}
+
+}

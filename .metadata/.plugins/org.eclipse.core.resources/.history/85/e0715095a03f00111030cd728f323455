@@ -1,0 +1,27 @@
+import javax.swing.*;
+public class Mayor {
+	
+	
+	
+	
+
+	// Generar un array de enteros aleatorios de dos digitos y ordenar de menor a mayor
+	public void mayor(){
+
+	int[] valores = new int [20];
+			
+		}
+		
+
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Creacion de objetos
+
+		
+	}
+
+}

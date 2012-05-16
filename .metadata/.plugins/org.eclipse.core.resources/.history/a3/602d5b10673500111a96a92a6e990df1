@@ -1,0 +1,33 @@
+/** Uso de bucles while, do while y For con ejercicios (anidados)
+ */
+import java.io.*;
+
+public class Bucle8 extends Print {
+
+// BufferedReader
+	static String read() throws IOException {
+	String s1;	
+		BufferedReader S = new BufferedReader(new InputStreamReader(System.in));
+	s1 = S.readLine();	
+		return s1;
+	}
+//	Calcular el factorial de un numero, mediante subprogramas.
+	static void iniFactorial() throws IOException {
+		int numero;
+		System.out.println("Ingrese un numero para calcular su factorial : ");
+numero = Integer.parseInt(read());	
+		while(numero < 0){
+			System.out.println("No tiene factorial");
+				}
+	}
+static void cuerPrimo(int numero)	{
+	
+	
+	
+}
+	public static void main(String[] args) {
+		// Creacion de objetos
+
+	}
+
+}

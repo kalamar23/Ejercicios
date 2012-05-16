@@ -1,0 +1,18 @@
+
+public class Animal {
+
+	public void comer(){
+		
+		System.out.println("Animal comiendo...");
+	}
+	
+	public void relinchar(){
+		
+		System.out.println("Animal relinchando...");
+		
+		
+	}
+	
+	
+	
+}

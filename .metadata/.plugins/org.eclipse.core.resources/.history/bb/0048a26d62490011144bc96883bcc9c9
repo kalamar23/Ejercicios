@@ -1,0 +1,63 @@
+import javax.swing.*;
+
+public class Ordenar2 {
+
+	//  Leer 10 enteros. Guardar en otra tabla los elementos pares de la primera, y a continuación los elementos
+	// impares
+
+
+	public void ordenar(){
+		
+		int[] leer = new int [10];
+		int[] ordena = new int [10];
+		
+for(byte i = 0;i < leer.length;i++){
+	
+	leer[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero : "));
+}
+byte k = 0;
+byte v = 0;
+while(v < 2){
+for(byte i = 0; i < ordena.length;i++){
+if(v == 0){
+	if(leer[i] % 2 == 0){
+	ordena[k] = leer[i];
+	k++;
+	}
+}
+if(v == 1){
+if(leer[i] % 2 != 0){
+		ordena[k] = leer[i];
+		k++;
+		}
+}
+}	
+v++;
+}
+for(byte i=0; i < ordena.length;i++){
+	System.out.println("ordena [" + i + "] = " + ordena[i]);
+	
+}
+
+
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args){
+		
+		Ordenar2 T = new Ordenar2();
+		
+	T.ordenar();	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}

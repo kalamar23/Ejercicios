@@ -1,0 +1,15 @@
+
+public class Tiempo {
+
+	// Escriba un programa que solicite al usuario una cantidad en segundos y la convierta en días, horas, minutos
+	// y segundos
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

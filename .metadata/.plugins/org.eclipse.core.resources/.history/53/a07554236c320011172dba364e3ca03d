@@ -1,0 +1,19 @@
+/** Uso de bucles - While, Do While y For , Bucle
+ */
+public class Bucle3 extends Debug {
+
+	static void bucle1(){
+		int valor1 = 12 , valor2;
+		valor2 = valor1 << 2;
+		
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		// Creacion de objetos
+bucle1();
+	}
+
+}

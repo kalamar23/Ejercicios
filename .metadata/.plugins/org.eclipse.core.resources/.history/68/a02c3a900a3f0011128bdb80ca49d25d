@@ -1,0 +1,103 @@
+import javax.swing.*;
+import javax.swing.table.*;
+import javax.swing.table.TableCellRenderer;
+import java.awt.*;
+import java.awt.Color;
+import java.math.*;
+
+class MiRender extends DefaultTableCellRenderer {
+
+	private Font font = new Font("Courier", Font.PLAIN, 20);
+
+	
+	
+	
+	public Component getTableCellRendererComponent(JTable tabla,
+                                          Object value,
+                                          boolean isSelected,
+                                          boolean hasFocus,
+                                          int row,
+                                          int column) {
+Component c = 
+super.getTableCellRendererComponent(tabla, value,
+                                   isSelected, hasFocus,
+                                   row, column);
+
+if (!tabla.isRowSelected(row))
+{
+    if((row == 4 && column == 4) && (row == 4 && column == 3)){
+        c.setBackground(Color.yellow);
+    c.setFont(font);}
+    else {
+        c.setBackground(tabla.getBackground());
+    }
+    
+    
+    }
+return c;
+}
+}
+
+class Mayor3 extends JFrame {
+
+// Obtener el numero mayor y menor de un array de enteros aleatorios de dos digitos
+
+public static int ANCHO = 700;
+public static int ALTO = 300;
+public static String TITULO = "Mayor o menor de vector";
+public static int mayor = 0;
+public static int menor = 99999;
+public static int tran = 0;
+Object [][] valores = new Object [5][5];
+String[] columna = {"1", "2", "3", "4", "5"};
+public void random(Object[][] valores){
+int ran = 98, ran2 = (int) (Math.random() * 30);
+for(int i = 0;i < valores.length;i++){
+    for(int j = 0; j < valores[i].length;j++){
+	tran = ran2 + ((int) (Math.random() * ((ran - ran2) + 1)));
+    	valores[i][j] = tran;
+if(tran > mayor){
+	mayor = tran;
+
+}
+if(tran < menor){
+	menor = tran;
+
+}
+   
+	}	
+}
+valores[4][3] = new String(String.valueOf(mayor) + " mayor");
+valores [4][4] = new String(String.valueOf(menor) + " menor");
+}
+	
+JTable tabla = new JTable(valores,columna);	
+JScrollPane miscroll;
+// constructor
+public Mayor3(){
+	super(TITULO);
+	setSize(ANCHO,ALTO);
+	addComponentes();
+	setVisible(true);
+	random(valores);
+	tabla.setDefaultRenderer(Object.class, new MiRender());
+
+}
+
+public void addComponentes(){
+	miscroll = new JScrollPane(tabla);
+	setContentPane(miscroll);
+	
+}
+}
+
+public class Mayor {
+public static void main(String[] args) {
+		// TODO Creacion de objetos
+Mayor3 ma = new Mayor3();
+ma.setLocationRelativeTo(null);
+ma.setResizable(false);
+
+	}
+
+}

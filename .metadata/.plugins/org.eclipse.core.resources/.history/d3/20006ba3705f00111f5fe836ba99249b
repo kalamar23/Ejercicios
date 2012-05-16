@@ -1,0 +1,53 @@
+
+public class Insertar {
+
+	// Dos Arrays  A y B , transponer A en B y mezclar a y b en c
+	
+public void trans(){
+	int[][] valor1 = new int [4][5]; 
+	int[][] valor2 = new int [5][4];
+	int[] mezcla = new int[50];
+
+	for(byte i = 0; i < valor1.length;i++){
+		for(byte j = 0;j < valor1[i].length;j++){
+			valor1[i][j] = (int) (Math.random() * 98);
+		
+		}
+	}
+	
+	for(byte i = 0; i < valor2.length;i++){
+		for(byte j = 0;j < valor2[i].length;j++){	
+			valor2[i][j] = valor1[j][i];
+		}
+	}
+	
+
+	
+
+for(byte i = 0; i < mezcla.length;i++){
+	
+	
+	
+	
+	
+}
+		
+		
+		
+	
+	
+	
+	
+	
+	
+}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Insertar in = new Insertar();
+		in.trans();
+		
+	}
+
+}

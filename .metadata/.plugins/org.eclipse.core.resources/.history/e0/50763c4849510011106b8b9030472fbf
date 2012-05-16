@@ -1,0 +1,22 @@
+import javax.swing.*;
+public class Palabra {
+	
+
+// Escribir dos frases y buscar la ocurrencia de una en la otra 
+	
+	public void pala1(){
+		
+		String s1 = JOptionPane.showInputDialog("Ingrese una frase : ");
+		String s2 = JOptionPane.showInputDialog("Ingrese una frase : ");
+
+	}
+	
+public static void main(String[] args){
+	
+	
+	
+}
+	
+	
+
+}

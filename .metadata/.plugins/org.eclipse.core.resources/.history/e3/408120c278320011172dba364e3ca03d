@@ -1,0 +1,19 @@
+/** Uso de bucles - While, Do While y For , Bucle
+ */
+import java.util.*;
+public class Bucle3 extends Debug {
+
+	static void bucle1(){
+
+		StringBuffer sb = new StringBuffer();
+		Stack st = new Stack();
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		// Creacion de objetos
+bucle1();
+	}
+
+}

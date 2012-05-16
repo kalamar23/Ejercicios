@@ -1,0 +1,22 @@
+
+public class Caballo extends Animal {
+
+	public void comer(){
+		
+		System.out.println("Caballo comiendo...");
+	}
+	
+	
+	public static void main(String[] args ){
+		
+		Animal a = new Animal();
+		Caballo b = new Caballo();
+	
+		a.comer();
+		b.comer();
+		
+		
+	}
+	
+	
+}

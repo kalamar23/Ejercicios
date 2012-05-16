@@ -1,0 +1,8 @@
+#Tue Jan 31 03:37:30 CLST 2012
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+content_assist_parameters_foreground=255,255,255
+content_assist_proposals_foreground=130,130,130
+hoverModifiers=combinationHover|true|0;problemHover|false|0;documentationHover|false|0;annotationHover|true|Shift;
+useQuickDiffPrefPage=true
+content_assist_number_of_computers=2

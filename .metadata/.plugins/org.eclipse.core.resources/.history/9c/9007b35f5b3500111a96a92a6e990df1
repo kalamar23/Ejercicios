@@ -1,0 +1,24 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import java.io.*;
+
+public class Bucle8 extends Print {
+
+// BufferedReader
+	static String read() throws IOException {
+	String s1;	
+		BufferedReader S = new BufferedReader(new InputStreamReader(System.in));
+	s1 = S.readLine();	
+		return s1;
+	}
+
+	
+	
+	public static void main(String[] args) {
+		// Creacion de objetos
+
+	}
+
+}

@@ -1,0 +1,25 @@
+
+public class ClaseExterna {
+
+	int x = 10;
+	
+	class ClaseInterna {
+		
+		public void verClaseExterna(){
+			System.out.println("El valor x de la clase externa es : " + x);
+		}
+		
+	}
+	
+	
+	
+	public void main(String[] args){
+		
+		
+		
+	}
+	
+	
+	
+	
+}

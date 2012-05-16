@@ -1,0 +1,21 @@
+
+public class Pila {
+
+private int stack[];
+private int stack_ptr; // indica si pila está vacia 
+	
+Pila(int size){
+	
+	
+	
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+}

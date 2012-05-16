@@ -1,0 +1,25 @@
+import javax.swing.*;
+public class Tiempo {
+
+	// Escriba un programa que solicite al usuario una cantidad en segundos y la convierta en días, horas, minutos
+	// y segundos
+	
+	public void segundo(){
+		
+	int second = Integer.parseInt(JOptionPane.showInputDialog("Ingrese cantidad de segundos : "));	
+	
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

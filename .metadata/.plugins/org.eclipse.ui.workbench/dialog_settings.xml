@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PreferencesImportWizard">
+		<item value="/home/kala/Escritorio/theme-1115.epf" key=""/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/home/kala/Escritorio/temas Eclipse/theme-1004.epf"/>
+			<item value="/home/kala/Escritorio/temas Eclipse/theme-21.epf"/>
+			<item value="/home/kala/Escritorio/temas Eclipse/theme-1115.epf"/>
+			<item value="/home/kala/Escritorio/theme-1115.epf"/>
+			<item value="/home/kala/Escritorio/theme-1004.epf"/>
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="66" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="1366" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="744" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="net.sourceforge.sqlexplorer.plugin.wizards.sqleditor" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="net.sourceforge.sqlexplorer.new"/>
+		</list>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="380" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.pde.ui.PluginsView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="90" key="DIALOG_Y_ORIGIN"/>
+		<item value="496" key="DIALOG_X_ORIGIN"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.pde.ui"/>
+		</list>
+	</section>
+	<section name="FileExtensionDialogSettings">
+		<item value="615" key="DIALOG_WIDTH"/>
+		<item value="145" key="DIALOG_Y_ORIGIN"/>
+		<item value="72" key="DIALOG_X_ORIGIN"/>
+		<item value="349" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="EditorSelectionDialog">
+		<item value="true" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.Preferences" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+</section>

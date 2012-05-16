@@ -1,0 +1,35 @@
+import javax.swing.*;
+
+public class Ejer8 extends Print {
+
+	
+// conventir de decimal a romano
+static void romano (){
+String numero1;
+StringBuffer sb = new StringBuffer();
+int numero;
+numero1 =  JOptionPane.showInputDialog("Ingrese un numero : ");
+numero = Integer.parseInt(numero1);
+	while(numero >= 1000){	
+		sb.append(String.valueOf('M'));	
+	numero -= 1000;
+	
+	}
+	while(numero >= 900){
+		sb.append("CM");
+	}
+	
+	
+	
+}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Creacion de objetos
+Ejer8.romano();
+	}
+
+}

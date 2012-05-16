@@ -1,0 +1,20 @@
+
+public class Debug {
+int valor1,valor2, valor3;
+String s1, s2, s3;
+boolean bo1,bo2,bo3;
+double do1,do2,do3;
+	
+Debug (int valor1, int valor2){
+	
+}
+/** Imprime dos valores enteros
+ */
+static void Prompt (){
+		
+		
+		
+	}
+	
+	
+}

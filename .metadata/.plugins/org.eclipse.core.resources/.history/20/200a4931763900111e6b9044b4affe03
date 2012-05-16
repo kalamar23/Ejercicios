@@ -1,0 +1,17 @@
+
+public class Ejer8 extends Print {
+
+static void bucle1(){
+	
+}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Creacion de objetos
+
+	}
+
+}

@@ -1,0 +1,27 @@
+/** Uso de while
+ */
+import java.io.*;
+public class Operador7 {
+
+	static void ope1() throws IOException {
+		
+		while(true){
+			char ch;
+			System.out.println("Ingrese c o C para continuar");
+			ch = (char) System.in.read();
+			if(ch == 'c' || ch == 'C')
+				break;
+			
+		}
+		
+		
+	}
+
+	public static void main(String[] args) throws IOException {
+		// Creacion de objetos
+ope1();
+		
+		
+	}
+
+}

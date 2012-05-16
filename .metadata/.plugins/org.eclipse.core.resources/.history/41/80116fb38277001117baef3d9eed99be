@@ -1,0 +1,20 @@
+
+public class ClaseExterna {
+
+	class ClaseInterna {
+		
+		
+	}
+	
+	
+	
+	public void main(String[] args){
+		
+		
+		
+	}
+	
+	
+	
+	
+}

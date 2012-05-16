@@ -1,0 +1,19 @@
+import java.io.*;
+
+public class Repaso {
+
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+BufferedReader s1 = new BufferedReader(new InputStreamReader(System.in));
+	
+
+	
+	}
+
+}

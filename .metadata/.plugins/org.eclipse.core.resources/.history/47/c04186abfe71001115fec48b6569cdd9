@@ -1,0 +1,37 @@
+import static net.mindview.util.Print.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+public class Syncro {
+
+	
+	public void pablo(){
+		
+		
+	}
+	
+	public void neruda(){
+		
+	}
+	
+	public void close(){
+		
+		addWindowListener(new WindowAdapter(){
+			
+			public void windowClosing(WindowEvent e){
+				System.exit(0);
+			}
+		});
+		
+		
+	}
+	
+	public static void main(String [] args){
+
+		
+	}
+	
+	
+	
+}

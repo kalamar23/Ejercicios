@@ -1,0 +1,12 @@
+/** Uso de extends
+ */
+
+public class Extender {
+
+
+	public static void main(String[] args) {
+		// Creacion de objetos
+
+	}
+
+}

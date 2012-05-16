@@ -1,0 +1,54 @@
+package com.namex.tweet;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import javax.swing.*;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.auth.AccessToken;
+import twitter4j.auth.RequestToken;
+
+public class NamexTweet {
+    private final static String CONSUMER_KEY = "Xh0edRWU2efcRhsiSZ36A";
+    private final static String CONSUMER_KEY_SECRET = "tifWDMJPymivIKzRCtPSUBfMpD8hiynORnmuwqtG4";
+
+    public void start() throws TwitterException, IOException {
+
+ Twitter twitter = new TwitterFactory().getInstance();
+ twitter.setOAuthConsumer(CONSUMER_KEY, CONSUMER_KEY_SECRET);
+ RequestToken requestToken = twitter.getOAuthRequestToken();
+ System.out.println("URL de autorización: \n"
+  + requestToken.getAuthorizationURL());
+
+ AccessToken accessToken = null;
+ while (null == accessToken) {
+     try {
+  String pin = JOptionPane.showInputDialog("Ingrese el PIN aqui :");
+
+  accessToken = twitter.getOAuthAccessToken(requestToken, pin);
+
+     } catch (TwitterException te) {
+
+  System.out.println("No se ha podido acceder al token de acceso, causado por: "
+   + te.getMessage());
+
+  JOptionPane.showInputDialog("Reingrese el PIN");
+
+     
+     }
+ }
+
+ System.out.println("Token de acceso: " + accessToken.getToken());
+ System.out.println("Access Token Secret: "
+  + accessToken.getTokenSecret());
+String estado = JOptionPane.showInputDialog("Que desea decir : ");
+ twitter.updateStatus(estado);
+
+    }
+
+    public static void main(String[] args) throws Exception {
+ new NamexTweet2().start();// run the Twitter client
+    }
+}

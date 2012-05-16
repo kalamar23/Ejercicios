@@ -1,0 +1,46 @@
+/** Uso de bucles - While, Do While y For , Bucle
+ */
+import java.util.*;
+public class Bucle3 extends Debug {
+
+	static void bucle1(){
+		int[] valores = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int suma = 0;
+		for(int i = 0; i < valores.length;i++){
+
+			suma += valores[i];
+if(suma > 12) break;
+System.out.println("Recorriendo el arreglo ...");
+
+		}
+System.err.println("La suma excede el valor maximo !");		
+	}
+	
+	static void bucle2(){
+	int target = 50, valor1 = 5;
+
+	while(++valor1 * 5 != target);
+		System.out.println("El valor de valor1 es = " + valor1);
+		
+	}
+// 	Terminar un bucle anidado
+	static void bucle3(){
+int[][] valores = {{1, 2, 3},
+		           {3, 1, 2},
+		           {1, 3, 2}};
+
+
+
+}
+		
+
+
+	
+	public static void main(String[] args) {
+		// Creacion de objetos bucle1(); bucle2();	
+	
+	
+	
+	}
+
+}

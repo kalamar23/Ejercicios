@@ -1,0 +1,24 @@
+
+public class Ejer8 extends Print {
+
+	
+// conventir de decimal a romano
+static void romano (){
+
+	
+	
+	
+	
+	
+}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Creacion de objetos
+
+	}
+
+}

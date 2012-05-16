@@ -1,0 +1,64 @@
+/** Ultimos ejercicios con operadores - operador ternario if-else (?:)
+ */
+public class Operador {
+//operador ternario
+	
+
+	
+// metodo para obtener promedio de notas
+public double getNota (){
+	
+	double suma = 0,prome, notas [] = {5.0, 5.4, 6.0, 4.0, 4.9, 5.0 };
+	// valor medio del array
+	for(int i = 0;i < notas.length;i++){
+		
+		suma += notas[i];
+		
+		
+	}
+	
+	prome = suma/notas.length;
+System.out.println(prome);
+	return prome;
+}
+	public void ternario(){
+	
+		
+		System.out.println("El alumno está : " + (getNota() > 5.0 ? "Aprobado !" : "Reprobado"));
+		
+	}
+	
+public void ope1(){
+	
+int valor1, valor2;
+
+valor1 = 6 + 24 / 6;
+valor2 = (6 + 24) / 6;
+
+System.out.println("Sin parentesis = " +valor1);
+System.out.println("con parentesis = " +valor2);
+
+
+}
+
+public static boolean esPrimo (int numero){
+	int contador = 2;
+	boolean primo = true;  
+	while((primo) && (contador != 2)){
+		if(numero % contador == 0)
+			primo = false;
+		contador++;
+	}
+	return primo;
+}
+
+
+public static void main(String[] args) {
+		// Creacion de objetos
+Operador op = new Operador();
+//op.ternario(); op.ope1();
+	
+
+}
+
+}

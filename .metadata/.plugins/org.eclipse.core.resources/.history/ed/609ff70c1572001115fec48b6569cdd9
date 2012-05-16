@@ -1,0 +1,42 @@
+/* Escribir un archivo de texto en disco
+ * 
+ * 
+ * 
+ */
+import java.io.*;
+import static net.mindview.util.Print.*;
+public class Escribir {
+
+	
+	
+	public void write() throws IOException {
+	
+		
+		
+		String sArchivo = "/home/kala/Escritorio/texto.log";
+		BufferedWriter bw = new BufferedWriter(new FileWriter(sArchivo));
+		File fichero = new File(sArchivo);
+		if(fichero.exists()){
+			print("El archivo ya se encuentra");
+		}
+		else{
+for(byte i = 0;i < 10;i++){
+	bw.write("Información escrita " + i + "veces");
+}
+		}
+	
+		
+		
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Escribir es = new Escribir();
+es.write();
+	}
+
+}

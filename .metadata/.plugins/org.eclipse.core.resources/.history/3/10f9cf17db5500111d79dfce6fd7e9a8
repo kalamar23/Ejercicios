@@ -1,0 +1,107 @@
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.*;
+import java.util.*;
+public class Primo extends JFrame {
+	private static int ANCHO = 533;
+	private static int ALTO = 350;
+// Mostrar los numeros primos existente hasta cierto limite introducido por teclado y mostrar de forma resaltada en una tabla
+// el numero primo más grande
+
+	
+Object [][] valores = new Object [5][5]; 
+String[] columna = {"1" , "2", "3", "4" , "5"};	
+	
+JTable tabla = new JTable(valores, columna);
+JPanel panel = new JPanel();
+JScrollPane miscroll;
+JButton boton1 = new JButton("Ver numeros primos");
+JLabel etiqueta = new JLabel();
+Primo(){
+super("Numeros primos");
+boton1.setLocation(200, 160);
+boton1.setSize(150, 40);
+etiqueta.add(boton1);
+etiqueta.setSize(530, 350);
+setSize(ANCHO , ALTO);
+etiqueta.add(tabla);
+panel.add(etiqueta);
+add(panel);
+setVisible(true);
+//addComponentes();
+primo();
+close();	
+}
+	
+	private void addComponentes(){
+	
+	miscroll = new JScrollPane(tabla);
+	setContentPane(miscroll);
+	
+}
+	
+	private void close(){
+		addWindowListener(new WindowAdapter(){
+			public void windowClosing(WindowEvent e){
+				System.exit(0);
+			}
+		});
+	}
+	
+	
+	// metodo calculo primos 
+	
+	public void primo(){
+		
+int limite = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un limite : "));		
+int mayor = 0;
+int menor = 99999;
+Stack st = new Stack();
+
+boolean primo = true;
+for(byte num = 1; num < limite;num++){
+for(byte contador = 2;contador < num && (primo) ;contador++){
+	if(num % contador == 0)
+	      primo = false;
+}
+	
+if(primo){
+	if(num > mayor)
+		mayor = num;
+	if(num < menor )
+		menor = num;
+	st.add(0, num);
+}
+else{
+	primo = true;
+}
+
+}
+// almacena valores en el array valores
+while(!st.empty()){
+	
+for(byte i = 0; i < valores.length;i++){
+	for(byte j = 0;j < valores[i].length;j++){
+	while(!st.empty())
+		valores[i][j] = st.pop();
+	}
+}
+
+}
+
+	
+	}
+	
+		
+		
+	
+	
+	
+	
+	public static void main(String[] args) {
+		//  
+		Primo nu = new Primo();
+
+	}
+
+}

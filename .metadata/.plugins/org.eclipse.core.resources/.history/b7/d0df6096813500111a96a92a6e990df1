@@ -1,0 +1,63 @@
+/** Uso de bucles while, do while y For con ejercicios (anidados)
+ */
+import java.io.*;
+
+public class Bucle8 extends Print {
+
+// BufferedReader
+	static String read() throws IOException {
+	String s1;	
+		BufferedReader S = new BufferedReader(new InputStreamReader(System.in));
+	s1 = S.readLine();	
+		return s1;
+	}
+//	Calcular el factorial de un numero, mediante subprogramas.
+	static void iniFactorial() throws IOException {
+		int numero;
+
+		System.out.println("Ingrese un numero para calcular su factorial : ");
+numero = Integer.parseInt(read());	
+if(numero > 0) {
+cuerPrimo(numero);
+}
+else {
+			System.out.println("No tiene factorial");
+}	
+}
+static void cuerPrimo(int numero)	{
+	
+	int temp, factorial = 1;
+	temp = numero; 
+while(temp > 0) {
+	factorial *= temp--;
+}
+System.out.println(numero +"! = " + factorial);
+}
+// Hacer un programa que calcule independientemente la suma de los pares y los impares de los numeros entre 1 y 1000, 
+// utilizando un switch.
+static void suma(){
+	System.out.println("Desea la suma de numeros 1) pares o 2) impares, desde 1 a 1000 : ");
+}
+static int sumaPares(){
+int suma = 0;
+for(int conta = 2;conta <= 1000; conta++){
+	if(conta % 2 == 0)
+		suma++;
+}
+return suma;
+}
+static int sumaImpares(){
+int suma = 0;
+for(int conta = 1;conta <= 1000; conta++){
+	if(conta % 2 != 0)
+		suma++;
+}
+return suma;
+}
+public static void main(String[] args) throws IOException {
+		// Creacion de objetos iniFactorial();
+	
+sumaPares();
+}
+
+}

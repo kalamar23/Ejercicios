@@ -1,0 +1,43 @@
+
+public class Pila {
+
+private int stack[];
+private int stack_ptr; // indica si pila está vacia 
+	
+Pila(int size){
+	
+	stack = new int [size];
+	stack_ptr = -1;
+}
+	
+	public int pop(){
+		
+		if(stack_ptr == -1) 
+			return 0 ;
+		else
+		return stack[stack_ptr--];
+	}
+	
+	public int push(int poner){
+		
+		if(stack_ptr >= 99)
+			return 0;
+		else{
+		stack[++stack_ptr] = poner;
+		return 1;
+		}
+	}
+	
+	public static void main(String[] args){
+		
+		
+		Pila stack = new Pila(20);
+		
+		
+		
+		
+		
+	}
+	
+	
+}

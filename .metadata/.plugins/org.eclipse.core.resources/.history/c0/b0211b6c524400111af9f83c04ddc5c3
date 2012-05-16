@@ -1,0 +1,17 @@
+public class Cuadrado {
+
+	static void hacer() {
+
+		System.out.println("Hola");
+	}
+
+	
+	
+	
+	
+	public static void main(String[] args) {
+
+		hacer();
+	}
+
+}

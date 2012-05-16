@@ -1,0 +1,29 @@
+import javax.swing.*;
+
+public class Cuadrado {
+
+
+/*Leer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número
+negativo*/
+	
+	public void cuadrado(){
+		int numero;
+		String s1 = JOptionPane.showInputDialog("Ingrese un numero");
+		numero = Integer.valueOf(s1);
+		
+		System.out.println(numero);
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+
+		
+		Cuadrado cu = new Cuadrado();
+		cu.cuadrado();
+		
+	}
+
+}

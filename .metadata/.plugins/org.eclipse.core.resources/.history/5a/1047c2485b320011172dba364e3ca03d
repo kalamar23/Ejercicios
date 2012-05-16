@@ -1,0 +1,19 @@
+
+public class Debug {
+int valor1;
+int valor2;
+int valor3;
+String s1;
+boolean bo1;
+boolean bo2;
+double do1;
+double do2;
+double do3;
+	static void Prompt (){
+		
+		
+		
+	}
+	
+	
+}

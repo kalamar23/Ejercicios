@@ -1,0 +1,23 @@
+/** Uso de extends
+ */
+Interface A {
+	int X = 1;
+}
+
+Interface B {
+	double X = 2.0;
+}
+
+Interface C extends A {
+
+}
+
+public class Extender {
+
+
+	public static void main(String[] args) {
+		// Creacion de objetos
+
+	}
+
+}

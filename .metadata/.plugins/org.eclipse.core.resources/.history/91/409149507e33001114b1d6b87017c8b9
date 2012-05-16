@@ -1,0 +1,21 @@
+
+public class Bucle5 extends Print {
+// Imprimir los numeros que sean pares hasta 100
+	static void bucle1(){
+int contador = 2;
+		while(contador < 100){
+			
+	if(contador % 2 == 0)		
+			
+			
+		}
+				
+	}
+	
+	
+	public static void main(String[] args) {
+		// Creacio de objetos
+
+	}
+
+}

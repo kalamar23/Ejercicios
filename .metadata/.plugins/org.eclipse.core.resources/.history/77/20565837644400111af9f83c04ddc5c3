@@ -1,0 +1,29 @@
+import javax.swing.*;
+public class Invertir {
+
+	
+	// Leer 5 números y mostrarlos en orden inverso al introducido
+public void numeros(){
+	int[] valores = new int [5];
+	StringBuffer sb = new StringBuffer();
+	for(byte i = 0; i < 5; i++){
+		
+		valores[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero : "));	
+	}
+	for(byte i = 5; i > 0; i--){
+	
+		sb.append(String.valueOf(valores[i]) + " , ");	
+	}
+	
+	
+	
+}
+	
+	
+	
+	public static void main(String[] args) {
+		// Creacion de objetos
+
+	}
+
+}

@@ -1,0 +1,43 @@
+
+public class Bucle5 extends Print {
+// Imprimir los numeros que sean pares hasta 100
+	static void bucle1() {
+		int contador = 2;
+		while (contador <= 100) {
+
+			if (contador % 2 == 0) {
+				System.out.println("El numero " + contador + " es par");
+			}
+			contador++;
+		}
+	}
+// sumar los 100 primeros numeros
+	static void bucle2(){
+		int suma = 0;
+for(int contador = 1;contador <= 100;suma += contador++);	
+		
+		System.out.println("La suma de los 100 primeros numeros es : " +suma);
+		
+	}
+// Debe imprimir los numeros imparares que hay de 1 a 100 y cuantos son
+	static void bucle3(){
+	int contador = 1;
+	while (contador <= 100){
+		if(contador % 2 != 0){
+	System.out.println("El numero" + contador);
+		}
+		
+		
+			}
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		// Creacio de objetos bucle1();
+bucle2();
+	
+	}
+
+}

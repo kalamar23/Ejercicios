@@ -1,0 +1,28 @@
+/* Escribir un archivo de texto en disco
+ * 
+ * 
+ * 
+ */
+import java.io.*;
+public class Escribir {
+
+	
+	
+	public void write(){
+		
+		String sArchivo = "~/Escritorio/texto.log";
+		File fichero = new File(sArchivo);
+		if()
+		
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
